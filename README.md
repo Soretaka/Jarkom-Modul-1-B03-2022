@@ -38,7 +38,7 @@ Setelah itu maka dapat dibuka file html dari 194(detail topik).
 
 
 ## 3. Filter sehingga wireshark hanya menampilkan paket yang menuju port 80! 
-Menggunakan syntax `cp.dstport == 80 || udp.dstport == 80`,
+Menggunakan syntax `tcp.dstport == 80 || udp.dstport == 80`,
 karena yang akan ditampilkan paket yang menuju port 80, kita perlu menambahkan dst
 
 ![image](https://user-images.githubusercontent.com/78299006/192095964-b50797bf-b818-4428-8105-8da0233b5372.png)
@@ -109,4 +109,4 @@ Adapun isi dari flag.txt yakni :
 ![image](https://user-images.githubusercontent.com/78299006/192095509-b815e7c2-6bc7-4e19-9e13-ca140d16d6ec.png)
 
 ### Tambahan
-Adapun praktikum kali ini, semua peserta berkontribusi. Dimana, untuk nomor 1-3 dikerjakan oleh Maheswara, 4-6 dikerjakan oleh James, dan 7-10 dikerjakan oleh Yatestha. Juga, terdapat diskusi dalam kelompok dalam pengerjaan praktikum kali ini.
+Adapun praktikum kali ini, semua peserta berkontribusi. Dimana, untuk nomor 1-3 dikerjakan oleh Maheswara, 4-6 dikerjakan oleh James, dan 7-10 dikerjakan oleh Yatestha. Juga, terdapat diskusi kelompok dalam pengerjaan praktikum kali ini.
