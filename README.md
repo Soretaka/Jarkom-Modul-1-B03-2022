@@ -9,18 +9,53 @@
 
 ## 1. Sebutkan web server yang digunakan pada "monta.if.its.ac.id"! 
 
+Pertama kita menggunakan display filter `http.host contains monta.if.its.ac.id` kemudian `Follow > TCP Stream` agar bisa mendapatkan response dari request di path login.php
+
+![image](https://user-images.githubusercontent.com/78299006/192095794-69fd7ff0-ae6d-4d4f-95c9-f56b24d3c739.png)
+
+![image](https://user-images.githubusercontent.com/78299006/192095821-a1b529f6-c665-4a87-a24e-5e01726a8dd0.png)
+
+Dari hasil Follow TCP Stream diatas, dalam respons header terdapat header dengan value nginx/1.10.3(Windows)
+
+
 ## 2. Ishaq sedang bingung mencari topik ta untuk semester ini , lalu ia datang ke website monta dan menemukan detail topik pada website “monta.if.its.ac.id” , judul TA apa yang dibuka oleh ishaq ?
+Bisa diindentifikasikan bahwa yang kita cari adalah “detail topik”, maka dari itu bisa di highlight yang menandakan sebagai detail topik.
+
+![image](https://user-images.githubusercontent.com/78299006/192095877-b3d96ff1-274d-4175-b1f5-0faf794781c0.png)
+
+Lalu langkah selanjutnya adalah untuk meng-export dari html detail topik.
+
+![image](https://user-images.githubusercontent.com/78299006/192095918-247421f2-8e12-494a-a466-d01fd8e3d0aa.png)
+
+Memilih 194, save dan tambahkan ekstensi .html
+
+![image](https://user-images.githubusercontent.com/78299006/192095932-4071ed44-df4f-479f-90bc-3a9cedbf8e11.png)
+
+Setelah itu maka dapat dibuka file html dari 194(detail topik).
+
+![image](https://user-images.githubusercontent.com/78299006/192095941-bcbbc883-f808-4fbf-a58b-674043df8998.png)
+
+
 
 ## 3. Filter sehingga wireshark hanya menampilkan paket yang menuju port 80! 
+Menggunakan syntax `cp.dstport == 80 || udp.dstport == 80`,
+karena yang akan ditampilkan paket yang menuju port 80, kita perlu menambahkan dst
+
+![image](https://user-images.githubusercontent.com/78299006/192095964-b50797bf-b818-4428-8105-8da0233b5372.png)
+
+
 
 ## 4. Filter sehingga wireshark hanya mengambil paket yang berasal dari port 21!
+
 Gunakan display filter `tcp.srcport == 21 || udp.srcport == 21,`
 kita menambahkan src untuk mengambil paket yang hanya berasal dari port 21
+
 ![image](https://user-images.githubusercontent.com/78299006/192094223-f0bd4b90-f3d4-4081-93b4-ac621b74085e.png)
 
 
 ## 5. Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!
 Gunakan display filter `tcp.srcport == 443 || udp.srcport == 443`
+
 ![image](https://user-images.githubusercontent.com/78299006/192094310-d7cff90d-1227-4252-b906-08953419587a.png)
 
 
@@ -72,3 +107,6 @@ Lalu kami save as sebagai B03.des3 sesuai dengan arahan soal. Berdasarkan percak
 Adapun isi dari flag.txt yakni :
 
 ![image](https://user-images.githubusercontent.com/78299006/192095509-b815e7c2-6bc7-4e19-9e13-ca140d16d6ec.png)
+
+### Tambahan
+Adapun praktikum kali ini, semua peserta berkontribusi. Dimana, untuk nomor 1-3 dikerjakan oleh Maheswara, 4-6 dikerjakan oleh James, dan 7-10 dikerjakan oleh Yatestha. Juga, terdapat diskusi dalam kelompok dalam pengerjaan praktikum kali ini.
